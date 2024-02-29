@@ -41,8 +41,8 @@
             body: JSON.stringify({
               from: email,
               to: 'neo2_neo@mail.ru',
-              subject: 'New Order Received',
-              text: `Name: ${name}\nEmail: ${email}\nProduct: ${product}\nQuantity: ${quantity}`,
+              subject: 'Новый заказ получен',
+              text: `ФИО: ${name}\nEmail: ${email}\nПродукт: ${product}\nКол-во: ${quantity}`,
             }),
             headers: {
               'Content-Type': 'application/json',
@@ -50,10 +50,10 @@
           });
 
           if (response.ok) {
-            alert('Order sent successfully!');
+            alert('Заказ успешно отправлен!');
             orderForm.reset();
           } else {
-            throw new Error('Failed to send order.');
+            throw new Error('Не удалось отправить заказ');
           }
         } catch (error) {
           console.error(error);
