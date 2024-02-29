@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Order Form</h1>
-    <form action="send_order.php" method="post">
+    <form id="order-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -20,7 +20,40 @@
         <label for="quantity">Quantity:</label>
         <input type="number" id="quantity" name="quantity" min="1" required><br><br>
 
-        <input type="submit" value="Submit Order">
+        <button type="submit">Submit Order</button>
     </form>
-</body>
-</html>
+
+    <script>
+      const orderForm = document.getElementById('order-form');
+
+      orderForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(orderForm);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const product = formData.get('product');
+        const quantity = formData.get('quantity');
+
+        try {
+          const response = await fetch('/api/send-email', {
+            method: 'POST',
+            body: JSON.stringify({
+              from: email,
+              to: 'your_email_address@example.com',
+              subject: 'New Order Received',
+              text: `Name: ${name}\nEmail: ${email}\nProduct: ${product}\nQuantity: ${quantity}`,
+            }),
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          });
+
+          if (response.ok) {
+            alert('Order sent successfully!');
+            orderForm.reset();
+          } else {
+            throw new Error('Failed to send order.');
+          }
+        } catch (error) {
+          console.error(error);
