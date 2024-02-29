@@ -1,6 +1,6 @@
 <?php
 // Configuration
-$to = 'your-email@example.com';
+$to = 'neo2_neo@mail.ru';
 $subject = 'New Order Received';
 $headers = "From: $from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
