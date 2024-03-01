@@ -42,7 +42,11 @@
     <input type="number" id="employees" name="employees" min="1" required><br><br>
 
     <label for="economysector">Economy sector:</label>
-    <input type="text" id="economysector" name="economysector" required><br><br>
+    <select id="economysector" name="economysector" class="form-control" required>
+      <option value="Primary">Primary</option>
+      <option value="Secondary">Secondary</option>
+      <option value="Tertiary">Tertiary</option>
+    </select><br><br>
 
     <label for="deadline">Deadline:</label>
     <input type="date" id="deadline" name="deadline" required><br><br>
