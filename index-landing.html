@@ -3,25 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aurora Select - Landing Page</title>
+  <title>Aurora Select</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       font-size: 18px;
       text-align: center;
-      margin-top: 100px;
     }
-    a {
-      display: block;
-      margin: 0 auto;
-      background-color: #007bff;
-      color: white;
-      padding: 10px 30px;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+    }
+    .navbar a {
+      color: #fff;
       text-decoration: none;
-      border-radius: 5px;
+      margin: 0 10px;
+    }
+    .navbar a:hover {
+      color: #ccc;
     }
   </style>
 </head>
+<body>
+  <div class="navbar">
+    <a href="index-landing.html">Home</a>
+    <a href="index.html">Order Now</a>
+  </div>
 <body>
   <h1>Welcome to Aurora Select!</h1>
   <p>Please fill out the form below to order your devices:</p>
