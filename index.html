@@ -23,45 +23,50 @@
     action="https://formspree.io/f/xrgnkjzv"
     method="POST"
   >
-    <label for="name">Name:</label>
+    <label for="name">Ваше ФИО:</label>
     <input type="text" id="name" name="name" required><br><br>
 
-    <label for="email">Email:</label>
+    <label for="email">Ваш Email:</label>
     <input type="email" id="email" name="email" required><br><br>
 
-    <label for="phone">Phone number:</label>
+    <label for="phone">Ваш номер телефона:</label>
     <input type="tel" id="phone" name="phone" required><br><br>
 
-    <label for="job">Your job:</label>
+    <label for="job">Ваша должность:</label>
     <input type="text" id="job" name="job" required><br><br>
 
-    <label for="organisation">Organisation name:</label>
+    <label for="organisation">Ваша организация:</label>
     <input type="text" id="organisation" name="organisation" required><br><br>
 
-    <label for="employees">Number of employees:</label>
+    <label for="employees">Кол-во сотрудников:</label>
     <input type="number" id="employees" name="employees" min="1" required><br><br>
 
-    <label for="economysector">Economy sector:</label>
+    <label for="economysector">Сфера деятельности:</label>
     <select id="economysector" name="economysector" class="form-control" required>
-      <option value="Primary">Primary</option>
-      <option value="Secondary">Secondary</option>
-      <option value="Tertiary">Tertiary</option>
+      <option value="IT">ИТ</option>
+      <option value="Finance">Финансы</option>
+      <option value="Manufacturing">Промышленность</option>
     </select><br><br>
 
-    <label for="deadline">Deadline:</label>
+    <label for="deadline">Срочность внедрения (дедлайн):</label>
     <input type="date" id="deadline" name="deadline" required><br><br>
 
-    <label for="device">Device:</label>
-    <select id="device" name="device" required>
-      <option value="Tablet">Tablet</option>
-      <option value="Smartphone">Smartphone</option>
-      <option value="PDA">PDA</option>
+    <label for="device">Парк устройств:</label><br>
+    <label class="checkbox-inline">
+      <input type="checkbox" name="device[]" id="device-tablet" value="Tablet"> Планшеты
+    </label><br>
+    <label class="checkbox-inline">
+      <input type="checkbox" name="device[]" id="device-smartphone" value="Smartphone"> Смартфоны
+    </label><br>
+    <label class="checkbox-inline">
+      <input type="checkbox" name="device[]" id="device-pda" value="PDA"> КПК
+    </label>
     </select><br><br>
 
-    <label for="quantity">Quantity:</label>
+    <label for="quantity">Количество требуемых устройств:</label>
     <input type="number" id="quantity" name="quantity" min="1" required><br><br>
 
-    <button type="submit">Submit Order</button>
+    <button type="submit">Оформить заказ</button>
   </form>
 </body>
 </html>
