@@ -10,26 +10,25 @@
       font-size: 18px;
       text-align: center;
     }
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #333;
-      padding: 10px 20px;
+    .order-button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
     }
-    .navbar a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    .navbar a:hover {
-      color: #ccc;
+    .order-button:hover {
+      background-color: #3e8e41;
     }
   </style>
 </head>
 <body>
   <h1>Добро пожаловать в Aurora Select!</h1>
   <p>Нажмите на кнопку ниже, чтобы оформить заказ:</p>
-  <a href="index-orderform.html">Оформить заказ</a>
+  <a href="index-orderform.html"><button class="order-button">Оформить заказ</button></a>
 </body>
 </html>
